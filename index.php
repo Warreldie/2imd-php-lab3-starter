@@ -1,10 +1,4 @@
-<?php
-  require_once("database/connection.php");
-  $query = $conn->prepare("select * from artists");
-  $query->execute();
-  $artists = $query->fetchAll();
-  
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title></title>
@@ -19,6 +13,48 @@
   <?php
   require_once("header.php");
   ?>
+
+
+<section class="content"><div class="content__left"><section class="navigation">
+  
+  <!-- / -->
+  <!-- Your Music -->
+  <div class="navigation__list"><div class="navigation__list__header"
+   role="button"
+   data-toggle="collapse"
+   href="#yourMusic"
+   aria-expanded="true"
+   aria-controls="yourMusic">Your Music
+  </div>
+  <div class="collapse in" id="yourMusic">
+  <a href="#" class="navigation__list__item"><i class="ion-ios-musical-notes"></i><span>Albums</span>
+  </a>
+  <a href="#" class="navigation__list__item"><i class="ion-person"></i><span>Artists</span>
+  </a>
+  
+  </div>
+  </div>
+  <!-- / -->
+  <!-- Playlists -->
+  <div class="navigation__list"><div class="navigation__list__header"
+   role="button"
+   data-toggle="collapse"
+   href="#playlists"
+   aria-expanded="true"
+   aria-controls="playlists">Playlists
+  </div>
+  <div class="collapse in" id="playlists">
+
+  <!-- LOOP OVER PLAYLISTS -->
+  <a href="#" class="navigation__list__item"><i class="ion-ios-musical-notes"></i><span>Playlist name goes here</span></a>
+  <!-- END LOOP -->
+  </a>
+  </div>
+  </div>
+  <!-- / -->
+  </section>
+
+
   <section class="playlist"><a href="#">
    <i class="ion-ios-plus-outline"></i>New Playlist
  </a>
@@ -34,14 +70,14 @@
 <div role="tabpanel" class="tab-pane" id="related-artists">
   <div class="media-cards">
     <!-- START ARTIST LOOP -->
-    <?php foreach($artists as $a): ?>
+    
           <div class="media-card">
-            <div class="media-card__image" style="background-image: url(<?php echo $a['cover']; ?>);">
+            <div class="media-card__image" style="background-image: url(https://loremflickr.com/320/320/1?lock=1);">
               <i class="ion-ios-play"></i>
             </div>
-            <a href="artist.php?id=<?php echo $a['id']; ?>" class="media-card__footer"><?php echo $a["name"]; ?></a>
+            <a href="artist.php?id=1" class="media-card__footer">Eveline Collins PhD</a>
           </div>
-    <?php endforeach; ?>
+    
     <!-- END ARTIST LOOP -->
   </div>
 </div>

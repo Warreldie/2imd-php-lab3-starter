@@ -1,7 +1,4 @@
-<?php
-
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Artist</title>
@@ -16,6 +13,45 @@
   <?php 
   require_once("header.php");
   ?>
+
+<section class="content"><div class="content__left"><section class="navigation">
+  
+<!-- / -->
+<!-- Your Music -->
+<div class="navigation__list"><div class="navigation__list__header"
+ role="button"
+ data-toggle="collapse"
+ href="#yourMusic"
+ aria-expanded="true"
+ aria-controls="yourMusic">Your Music
+</div>
+<div class="collapse in" id="yourMusic">
+<a href="#" class="navigation__list__item"><i class="ion-ios-musical-notes"></i><span>Albums</span>
+</a>
+<a href="#" class="navigation__list__item"><i class="ion-person"></i><span>Artists</span>
+</a>
+
+</div>
+</div>
+<!-- / -->
+<!-- Playlists -->
+<div class="navigation__list"><div class="navigation__list__header"
+ role="button"
+ data-toggle="collapse"
+ href="#playlists"
+ aria-expanded="true"
+ aria-controls="playlists">Playlists
+</div>
+<div class="collapse in" id="playlists">
+
+<a href="#" class="navigation__list__item"><i class="ion-ios-musical-notes"></i><span>Playlist name goes here</span></a>
+
+</a>
+</div>
+</div>
+<!-- / -->
+</section>
+
   <section class="playlist"><a href="#">
    <i class="ion-ios-plus-outline"></i>New Playlist
  </a>
@@ -26,7 +62,7 @@
 </section>
 </div>
 <div class="content__middle"><div class="artist is-verified"><div class="artist__header"><div class="artist__info"><div class="profile__img"><img src="https://loremflickr.com/320/320/1?lock=1" alt="Artist name here" /></div>
-<div class="artist__info__meta"><div class="artist__info__type">Artist</div><div class="artist__info__name">Miss Mellie Hoeger Sr.</div><div class="artist__info__actions"><button class="button-dark"><i class="ion-ios-play"></i>Play
+<div class="artist__info__meta"><div class="artist__info__type">Artist</div><div class="artist__info__name">Eveline Collins PhD</div><div class="artist__info__actions"><button class="button-dark"><i class="ion-ios-play"></i>Play
 </button>
 <button class="button-light">Follow</button><button class="button-light more"><i class="ion-ios-more"></i></button>
 </div>
